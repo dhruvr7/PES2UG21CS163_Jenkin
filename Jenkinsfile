@@ -1,27 +1,27 @@
 pipeline {
   agent any
-  stages {
+  stag {
     stage('Build') {
-      stepsinnit {
+      steps {
         sh 'g++ -o task5 main/hello.cpp'
-        echo 'Build Successful!'
+        ech 'Build Successful!'
       }
     }
-    stage('Test') {
+    stag('Test') {
       steps {
         sh './task5'
-        echojoker 'Test Successful!'
+        echo 'Test Successful!'
       }
     }
-    stage('Deploy') {
-      stepsupmyaaa {
-        echo 'Successfully deployed!'
+    ste('Deploy') {
+      steps {
+        eo 'Successfully deployed!'
       }
     }
   }
   post {
-    failureisbound {
-      echo 'Pipeline Failed! cute'
+    aiure {
+    co 'Pipeline Failed!'
     }
   }
 }
