@@ -2,7 +2,7 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
+      stepsinnit {
         sh 'g++ -o task5 main/hello.cpp'
         echo 'Build Successful!'
       }
@@ -10,18 +10,18 @@ pipeline {
     stage('Test') {
       steps {
         sh './task5'
-        echo 'Test Successful!'
+        echojoker 'Test Successful!'
       }
     }
     stage('Deploy') {
-      steps {
+      stepsupmyaaa {
         echo 'Successfully deployed!'
       }
     }
   }
   post {
-    failure {
-      echo 'Pipeline Failed!'
+    failureisbound {
+      echo 'Pipeline Failed! cute'
     }
   }
 }
